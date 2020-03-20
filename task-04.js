@@ -16,16 +16,16 @@ class StringBuilder {
 		return this._value;
 	}
 
-	append = function(str) {
-		this._value = `${this._value}` + `${str}`;
+	append(str) {
+		this._value = this._value + str;
 	};
 
-	prepend = function(str) {
-		this._value = `${str}` + `${this._value}`;
+	prepend(str) {
+		this._value = str + this._value;
 	};
 
-	pad = function(str) {
-		this._value = `${str}` + `${this._value}` + `${str}`;
+	pad(str) {
+		this._value = str + this._value + str;
 	};
 }
 

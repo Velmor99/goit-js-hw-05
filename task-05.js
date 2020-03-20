@@ -34,8 +34,8 @@ class Car {
     return this.price
   }
 
-  set _price(Num) {
-      return this.price = Num
+  set _price(num) {
+      return this.price = num;
   }
 
   /*
@@ -60,8 +60,8 @@ class Car {
    * не больше чем значение свойства maxSpeed
    */ //done
   accelerate(value) {
-      if(this.speed < this.maxSpeed) {
-      this.speed = value;
+      if(this.speed + value < this.maxSpeed) {
+        this.speed = this.speed += value;
       }
   }
   /*
@@ -69,8 +69,8 @@ class Car {
    * при условии что результирующая скорость не меньше нуля
    */ //done
   decelerate(value) {
-    if(this.speed - value > 0) {
-        this.speed = this.speed - value;
+    if(this.speed - value >= 0) {
+        this.speed = this.speed -= value;
     }
   }
   /*

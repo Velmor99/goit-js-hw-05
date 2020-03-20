@@ -11,27 +11,26 @@ class Storage {
 	constructor([ ...args ]) {
 		this.items = args;
 	}
-}
 
-Storage.prototype.getItems = function() {
-	console.log(this.items);
-};
+	getItems() {
+		console.log(this.items);
+	}
 
-Storage.prototype.addItem = function(string) {
-	this.items.push(string);
-};
+	addItem(string) {
+		this.items.push(string);
+	}
 
-Storage.prototype.removeItem = function(string) {
-	for (let i = 0; i < this.items.length; i += 1) {
-		if (this.items[i] === string) {
-			this.items.splice(i, 1);
+	removeItem(string) {
+		for (let i = 0; i < this.items.length; i += 1) {
+			if (this.items[i] === string) {
+				this.items.splice(i, 1);
+			}
 		}
 	}
-};
+}
 
 const storage = new Storage([ 'Нанитоиды', 'Пролонгер', 'Железные жупи', 'Антигравитатор' ]);
 
-console.log(storage);
 const items = storage.getItems();
 console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
 
